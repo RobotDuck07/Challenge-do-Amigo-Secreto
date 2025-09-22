@@ -22,3 +22,13 @@ function atualizarLista() {
     lista.appendChild(li);
   }
 }
+
+function sortearAmigo(){
+    if(listaDeamigos.length === 0) {
+        alert("Nenhum amigo cadastrado para sortear!");
+        return;
+    }
+    const indiceAleatorio = Math.floor(Math.random() * listaDeamigos.length);
+    const amigoSorteado = listaDeamigos[indiceAleatorio];
+    document.getElementById('resultado').innerHTML = `<li>Amigo sorteado: <strong>${amigoSorteado}</strong></li>`;
+}
